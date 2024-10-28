@@ -20,3 +20,13 @@ mean_math_score = df["Math_Score"].mean()
 df["Mean_Age_Imputed"] = df["Age"].fillna(mean_age)
 df["Mean_Math_Score_Imputed"] = df["Math_Score"].fillna(mean_math_score)
 print(df[["Age", "Math_Score", "Mean_Age_Imputed", "Mean_Math_Score_Imputed"]])
+
+# Calculate median values for Age and Science_Score
+median_age = df["Age"].median()
+median_science_score = df["Science_Score"].median()
+
+# Fill missing values with the median
+df["Median_Age_Imputed"] = df["Age"].fillna(median_age)
+df["Median_Science_Score_Imputed"] = df["Science_Score"].fillna(median_science_score)
+print(df[["Age", "Science_Score", "Median_Age_Imputed", "Median_Science_Score_Imputed"]])
+
